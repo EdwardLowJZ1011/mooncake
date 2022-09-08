@@ -1,0 +1,611 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=800, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="./styles/mooncake.css" />
+  <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+  <title>中秋节快乐</title>
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+    @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+    body {
+      background-image: url("./assets/mooncake3.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #form-container {
+      height: 60%;
+      width: 50%;
+      background-color: white;
+      opacity: 0.9;
+      text-align: center;
+      -webkit-box-shadow: 2px 2px 30px rgba(34, 15, 15, 0.25), 0 0 1px rgba(0, 0, 0, .5);
+      -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+      position: absolute;
+      left: 25%;
+      top: 25%;
+    }
+
+    #startGameIcon {
+      height: 25%;
+      width: 20%;
+      opacity: 0.9;
+    }
+
+    #firework {
+      height: 25%;
+      width: 20%;
+      opacity: 0.9;
+    }
+
+    #videoIcon {
+      height: 25%;
+      width: 20%;
+      opacity: 0.9;
+    }
+
+    #loveIcon {
+      height: 25%;
+      width: 20%;
+      opacity: 0.9;
+    }
+
+    #videoPlay {
+      padding: 20px;
+      height: 320;
+      width: 600;
+
+    }
+
+    #modalheader {
+      padding: 0 0 0 5;
+      margin-top: 10px;
+    }
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      margin-top: 7%;
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #327fa8;
+      color: white;
+      height: 5%;
+    }
+
+    .modal-body {
+      padding: 2px 16px;
+      height: 40%
+    }
+
+    .modal-footer {
+      padding: 2px 16px;
+      text-align: center;
+      background-color: #327fa8;
+      color: white;
+      height: 5%;
+    }
+
+
+    @media (min-width: 992px) and (max-width: 1767.98px) {
+      #form-container {
+        height: 80%;
+        width: 50%;
+      }
+
+      .modal {
+        margin-top: 1%;
+      }
+
+      #videoPlay {
+        height: 250;
+        width: 450;
+      }
+
+      .modal-header {
+        height: 7%;
+      }
+
+      .modal-body {
+        padding: 2px 16px;
+        height: 50%
+      }
+
+      .modal-footer {
+        height: 7%;
+      }
+
+    }
+        @media (min-width: 450px) and (max-width: 700px) {
+      #form-container {
+        height: 55%;
+        width: 80%
+      }
+
+      .modal-content {
+        width: 80%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="form-container">
+    <h1>中秋节快乐</h1>
+    <p>月到中秋分外明 每逢佳节倍思亲</p>
+    <p>相信有许多人独在异乡打拼，与家人分隔两地</p>
+    <p>但我依然祝愿各位在世界不同角落的家人健康平安，总有一天会再见面! </p>
+    <p><b>但愿人长久，千里共婵娟！</b></p>
+    <br />
+    <p>希望大家能在今天特别日子里陪伴家人</p>
+    <p>希望大家享受这个线上猜谜游戏与家人互动, 观看烟花，视频及音乐，就此别过，谢谢</p>
+    <br />
+    <a><img src='./assets/startIcon.png' id="startGameIcon" /></a>
+    <a><img src='./assets/firework.jpg' id="firework" /></a>
+    <a><img src='./assets/video.jpg' id="videoIcon" /></a>
+    <br />
+    <!-- <button id="startgame">Start Game</button> -->
+  </div>
+
+  <div id="quesModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div id='modalheaderid' class="modal-header">
+        <span id='close' class="close">&times;</span>
+        <h2 id="modalheader"></h2>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+
+      </div>
+      <div class="modal-footer" id="modalfooterid">
+
+      </div>
+    </div>
+
+  </div>
+
+  <div style="visibility:hidden;">
+    <video loop id="song">
+      <source src="./assets/song.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    (function () {
+
+      function $(id) {
+        return document.getElementById(id);
+      }
+
+      function deleteChild(e) {
+
+        var child = e.lastElementChild;
+        console.log(child);
+        while (child) {
+          e.removeChild(child);
+          child = e.lastElementChild;
+        }
+      }
+
+      var array = [{ 'question': '十五的月亮（打一成语）', 'ans': '正大光明' },
+      { 'question': '华夏共赏中秋月（打一旅游用语）', 'ans': '观光' },
+      { 'question': '中秋度蜜月(打一成语)', 'ans': '花好月圆' },
+      { 'question': '平日不思，中秋想你，有方有圆，甜甜蜜蜜 (打一食品名)', 'ans': '月饼' },
+      { 'question': '正月十五拿冠军 (打一成语)', 'ans': '胜利在望' },
+      { 'question': '耳朵长，尾巴短。只吃菜，不吃饭 (打一动物)', 'ans': '兔子' },
+      { 'question': '小姑娘，夜纳凉。带灯笼，闪闪亮 (打一动物)', 'ans': '萤火虫' },
+      { 'question': '船板硬，船面高。四把桨，慢慢摇 (打一动物)', 'ans': '乌龟' },
+      { 'question': '穿着大红炮，头戴铁甲帽。叫叫我阿公，捉捉我不牢 (打一动物)', 'ans': '蜈蚣' },
+      { 'question': '他有你没有，地有天没有 (打一字谜)', 'ans': '也' },
+      { 'question': '运动会上都有 (打一字谜)', 'ans': '云' },
+      { 'question': '一队胡子兵，当了牙医生。早晚来巡逻，打扫真干净 (打一用品)', 'ans': '牙刷' },
+      { 'question': '有头没有尾，有角又有嘴。扭动它的角，嘴里直淌水 (打一用品)', 'ans': '水龙头' },
+      { 'question': '一只罐，两个口。只装火，不装酒 (打一用品)', 'ans': '灯笼' },
+      { 'question': '小小狗，手里走。走一走，咬一口 (打一用品)', 'ans': '剪刀' },
+      ]
+
+      function createBookContainer() {
+        var pageIndex = 2;
+
+        var lastIndex = parseInt(array.length / 2) + 1;
+
+        var questBody = '<div id="p1" class="paper" style="z-index: ' + lastIndex-- + ';">' +
+          '<div class="front">' +
+          '<div class="front-content">' +
+          '<h3>闹中秋，射灯虎</h3>' +
+          '' +
+          '<img class="cover-img" src="./assets/guess.jpg">' +
+          '</div>' +
+          '</div>'
+
+        for (var i = 0; i < array.length; i++) {
+          if (i % 2 == 0) {
+            questBody += '<div class="back">' +
+              '<div class="back-content">' +
+              '<h2 style="padding:10px"  id="q' + (parseInt(i) + 1) + '">' + (parseInt(i) + 1) + '. ' + array[i]['question'] + '</h2>' +
+              '<div class="content">' +
+              '<input id="ans' + (parseInt(i) + 1) + '" type="text" />' +
+              '&nbsp&nbsp<input type="button" class="verifyAns" value="校验" id="' + "v" + (parseInt(i) + 1) + '"/>' +
+              '&nbsp&nbsp<input type="button" class="showAns" value="答案" id="' + "v" + (parseInt(i) + 1) + '"/>' +
+              '<br /><div id="showAns' + (parseInt(i) + 1) + '"></div>' +
+              '</div>' +
+              '</div>' +
+              '</div>' +
+              '</div>'
+          } else {
+            questBody += '<div id="p' + (pageIndex++) + '" class="paper" style="z-index: ' + lastIndex-- + ';">' +
+              '<div class="front">' +
+              '<div class="front-content">' +
+              '<h2 style="padding:10px" id="q' + (parseInt(i) + 1) + '">' + (parseInt(i) + 1) + '. ' + array[i]['question'] + '</h2>' +
+              '<div class="content">' +
+              '<input id="ans' + (parseInt(i) + 1) + '" type="text" />' +
+              '&nbsp&nbsp<input type="button" class="verifyAns" value="校验" id="' + "v" + (parseInt(i) + 1) + '"/>' +
+              '&nbsp&nbsp<input type="button" class="showAns" value="答案" id="' + "s" + (parseInt(i) + 1) + '"/>' +
+              '<br /><div id="showAns' + (parseInt(i) + 1) + '"></div>' +
+              '</div>' +
+              '</div>' +
+              '</div>'
+          }
+        }
+
+        return '<div id="book" class="book">' +
+          '<!-- Paper 1 -->' +
+          questBody +
+          '</div>'
+      }
+
+      var firework = $('firework');
+      
+      var curQuesIdx = 1;
+
+
+      firework.addEventListener('click', function () {
+        window.location.href = "index.html";
+      });
+
+     
+
+      var startGame = $('startGameIcon');
+      var videoPlay = $('videoIcon');
+      var modal = $('quesModal');
+
+
+      startGame.addEventListener('click', function () {
+
+        function findPages() {
+          var pages = []
+          var index = 1;
+          while (true) {
+            var p = $('p' + index++);
+            if (p) {
+              pages.push(p);
+            }
+            else {
+              break
+            }
+          }
+          return pages;
+        }
+
+        function changePageMargin(pages, currentState) {
+          if (currentState == 1 || currentState > pages.length) {
+            pages[0].style.width = '100%';
+            pages[pages.length - 1].style.width = '100%';
+          }
+          else {
+            pages[0].style.width = '50%';
+            pages[pages.length - 1].style.width = '50%';
+          }
+
+        }
+
+        modal.style.display = "block";
+        var video = $('song');
+        video.play();
+
+        var header = $('modalheader');
+        header.textContent = '猜灯谜';
+
+        var p = document.createElement('p');
+        p.textContent = '十五的月亮（打一成语）';
+        var e = $('modal-body-content');
+
+        deleteChild(e);
+        var div = document.createElement('div');
+        div.innerHTML = createBookContainer();
+        e.appendChild(div);
+
+        var existPrev = $("prev-btn");
+        var existNext = $("next-btn");
+
+        if (!(existPrev && existNext)) {
+          var modalFooter = $('modalfooterid');
+
+          var prev = document.createElement('button');
+          prev.id = "prev-btn";
+          var prevIcon = document.createElement('i');
+          prevIcon.className = "fas fa-arrow-circle-left";
+          prev.appendChild(prevIcon);
+
+          var next = document.createElement('button');
+          next.id = "next-btn";
+          var nextIcon = document.createElement('i');
+          nextIcon.className = "fas fa-arrow-circle-right";
+          next.appendChild(nextIcon);
+
+          modalFooter.appendChild(prev);
+          modalFooter.appendChild(next);
+        }
+
+        var prevBtn = $("prev-btn");
+        var nextBtn = $("next-btn");
+        var book = $("book");
+
+        var pages = findPages();
+
+        // Business Logic
+        let currentState = 1;
+        changePageMargin(pages, currentState);
+        // Event listeners
+        prevBtn.addEventListener("click", goPrevious);
+        nextBtn.addEventListener("click", goNext);
+
+        function openBook() {
+          book.style.transform = "translateX(50%)";
+          prevBtn.style.transform = "translateX(-180px)";
+          nextBtn.style.transform = "translateX(180px)";
+        }
+
+        function closeBook(isFirstPage) {
+          if (isFirstPage) {
+            book.style.transform = "translateX(0%)";
+          } else {
+            book.style.transform = "translateX(100%)";
+          }
+          prevBtn.style.transform = "translateX(0px)";
+          nextBtn.style.transform = "translateX(0px)";
+        }
+
+        function goNext() {
+
+          if (currentState < pages.length + 1) {
+            if (currentState == 1) {
+              openBook();
+              pages[currentState - 1].classList.add("flipped");
+              pages[currentState - 1].style.zIndex = currentState;
+            }
+            else if (currentState > 1 && currentState < pages.length) {
+              pages[currentState - 1].classList.add("flipped");
+              pages[currentState - 1].style.zIndex = currentState;
+              if (currentState < pages.length + 1 && currentState > parseInt(pages.length / 2) - 1) {
+                pages[currentState].style.zIndex = currentState + 1;
+              }
+            }
+            else if (currentState >= pages.length) {
+              closeBook(false);
+              pages[currentState - 1].classList.add("flipped");
+              pages[currentState - 1].style.zIndex = currentState;
+            }
+            currentState++;
+            changePageMargin(pages, currentState);
+          }
+        }
+
+        function goPrevious() {
+          if (currentState > 1) {
+            if (currentState <= pages.length) {
+              if (currentState == 2) {
+                closeBook(true);
+                pages[currentState - 2].classList.remove("flipped");
+                pages[currentState - 2].style.zIndex = pages.length;
+              }
+              else if (currentState > 2) {
+                pages[currentState - 2].classList.remove("flipped");
+                pages[currentState - 2].style.zIndex = pages.length - currentState + 2;
+                if (currentState > parseInt(pages.length / 2) - 1) {
+                  pages[currentState - 1].style.zIndex = pages.length - currentState;
+                }
+              }
+            }
+            else if (currentState > pages.length) {
+              openBook();
+              pages[currentState - 2].classList.remove("flipped");
+              pages[currentState - 2].style.zIndex = 1;
+            }
+
+            currentState--;
+            changePageMargin(pages, currentState);
+
+          }
+        }
+
+
+      });
+
+      videoPlay.addEventListener('click', function () {
+        modal.style.display = "block";
+        var song = $('song');
+        song.pause();
+        var header = $('modalheader');
+        header.textContent = '月亮 - 原创中秋节童谣《幼儿音乐律动》';
+        var oldvideo = $('videoPlay');
+        console.log(oldvideo)
+        if (oldvideo) {
+          oldvideo.play();
+        }
+        else {
+          var e = $('modal-body-content');
+          var f = $('modalfooterid');
+          var video = document.createElement('video');
+          video.id = "videoPlay";
+          video.src = "./assets/月亮 - 原创中秋节童谣《幼儿音乐律动》.mp4";
+          video.autoplay = true;
+          video.controls = true;
+          video.muted = false;
+          deleteChild(e);
+          deleteChild(f);
+          e.appendChild(video);
+        }
+
+      });
+
+      var close = document.getElementsByClassName("close")[0];
+      close.onclick = function () {
+        modal.style.display = "none";
+        var video = $('videoPlay');
+        var song = $('song');
+
+        song.pause();
+
+        if (video) {
+          video.pause();
+        }
+      }
+
+
+      window.onclick = function (event) {
+
+        if (event.target == modal) {
+          modal.style.display = "none";
+          var video = $('videoPlay');
+          var song = $('song');
+
+          if (video) {
+            video.pause();
+          }
+          song.pause();
+        }
+
+        else if (event.srcElement.className == 'verifyAns') {
+          var check = $(event.srcElement.id);
+          var qIndex = check.id
+          qIndex = qIndex.substring(1,);
+          var ans = $('ans' + qIndex);
+
+          if (ans) {
+            if (ans.value != "") {
+              var question = $('q' + qIndex);
+              var check = $('c' + qIndex);
+              if (check) {
+                question.removeChild(check);
+              }
+
+              if (ans.value == array[parseInt(qIndex) - 1]['ans']) {
+                question.innerHTML += '<i id="c' + parseInt(qIndex) + '" class="fas fa-check" style="color: green; font-size: 14px"></i>'
+              }
+              else {
+                question.innerHTML += '<i id="c' + parseInt(qIndex) + '" class="fa fa-times" style="color: red; font-size: 14px"></i>'
+              }
+            }
+            else {
+              alert('请输入答案')
+            }
+          }
+        }
+        else if (event.srcElement.className == 'showAns') {
+          var show = $(event.srcElement.id);
+          var qIndex = show.id
+          qIndex = qIndex.substring(1,);
+          var ans = $('showAns' + qIndex);
+
+          if (ans) {
+            ans.innerHTML = '<h3 style="background-color:yellow">' + array[qIndex - 1]['ans'] + '</h3>';
+          }
+
+
+        }
+
+      }
+
+
+
+
+    }());
+
+  </script>
+
+</body>
+
+</html>
